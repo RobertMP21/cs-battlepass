@@ -1,0 +1,232 @@
+:root{
+  --mainBackground: #181818;
+  --btnBackgroundColor: #000;
+  --btnBackgroundHoverColor: #000;
+  --btnTextHoverColor: rgb(21, 255, 0);
+  --btnNavbarColor: #ffffff;
+  --statusAreaTextColor: #ffffff;
+  --btnAwardBackgroundColor: #f700ff;
+  --btnAwardColor: #00ff00;
+  --btnAwardBackgroundColorHover: #00ff00;
+  --btnAwardColorHover: #000000;
+  --rewardSlotTextColor: rgb(255, 255, 255);
+}
+
+body {
+  display: none;
+}
+
+* {padding: 0; margin: 0; font-family: 'Montserrat', sans-serif;}
+.outer {
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80vw;
+  border-radius: 1rem;
+}
+
+.glass {
+  background: rgba(255,255,255,0.5);
+    border-radius: 1px;
+    border:5px solid rgba(255, 255, 255, 50.18);
+    
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--btnTextColor);
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background: rgba(0, 0, 0, 0.5); 
+  border: 1px solid rgb(255, 0, 221);
+  padding: 0.375rem 0.75rem;
+  box-shadow: 0.3rem 0.3rem 0.8rem 0.35rem rgb(255, 0, 221);
+  font-size: 1.5rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  margin-top: -10rem; /* Adjust the value to move the button up */
+}
+
+.btn-navbar {
+  width: 35%;
+  height: 20%;
+  font-weight: 600;
+  margin-right: auto;
+  margin-left: auto;
+  color: var(--btnNavbarColor);
+  border-bottom: 4px solid var(--btnTextHoverColor);
+  border-radius: 1;
+}
+
+.btn-navbar:hover{
+  color: var(--btnNavbarColor);
+  box-shadow: 0px 1px 0px 0px var(--btnTextHoverColor);
+  border-bottom: 4px solid var(--btnTextHoverColor);
+  box-shadow: 0.6rem 0.6rem 01.1rem 0.65rem rgb(255, 0, 221);
+
+}
+
+.btn-award{
+  margin-top: -15rem;
+  background-color: var(--btnAwardBackgroundColor);
+  color: var(--btnAwardColor);
+  width: 97%;
+  position: relative;
+  border-bottom-left-radius: 1.7rem;
+  border-bottom-right-radius: 1.7rem;
+  border: 3px solid rgb(21, 255, 0);
+  box-shadow: 0.1rem 0.1rem 0.6rem 0.15rem rgb(30, 255, 0);
+ 
+}
+
+.btn-award::after{
+  content: '';
+  position: absolute;
+  width: 85%;
+  height: 0.05rem;
+  background: hsl(315, 100%, 50%);
+  border-radius: 1;
+  bottom: 0;
+  left: 7.5%;
+  transform: scale(0,1);
+  box-shadow: 0.1rem 0.1rem 0.6rem 0.15rem rgb(255, 0, 221);
+  
+  
+ 
+}
+
+.btn-award:hover::after{
+  transform: scale(1,2);
+  transition: transform 0.7s cubic-bezier(0.39, 0.575, 0.565, 1);
+ 
+}
+
+.btn-award:hover{
+  background-color: var(--btnAwardBackgroundColorHover);
+  color: var(--btnAwardColorHover);
+  border: 1.5px solid rgb(255, 0, 221);
+  box-shadow: 0.1rem 0.1rem 0.6rem 0.15rem rgb(255, 0, 221);
+}
+
+.desc-awards{
+  font-weight: 100;
+  font-size: 1rem;
+  width: 100%;
+  height: 30vh;
+  overflow-y: auto;
+  overflow-wrap: break-word;
+}
+
+.desc-awards p:nth-child(2){
+  margin-top: 3rem;
+}
+
+.nav-bar{
+  display: flex;
+}
+
+.rewardPool{
+  width: 98%;
+  padding: 1rem 1rem;
+}
+
+.rewardsArea {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow-x: overlay;
+}
+
+.rewardsArea::-webkit-scrollbar {
+  display: none;
+}
+
+.reward-number{
+  background: rgb(255, 0, 221);
+  font-weight: 600;
+  color: #ffffff;
+  outline: 4px solid #f700ff; /* Adjust the outline width as needed */
+  font-size: 48px; /* Adjust the font size as needed */
+}
+
+.reward-image img {
+  width: 100px;
+  height: 100px;
+  margin: 50px 4px 4px 4px; /* Adjust the top margin to move the image down */
+}
+
+  .reward-slot{
+  width: 10vw;
+  height: 45vh;
+  border-radius: 1.7rem;
+  text-align: center;
+  overflow: hidden;
+  font-weight: 100;
+  margin-top: 1rem;
+  flex: 0 0 10vw;
+  color: var(--rewardSlotTextColor);
+  margin-right: 1rem;
+  border: 3px solid rgb(21, 255, 0);
+  background: rgba(0, 0, 0, 0.5); 
+  box-shadow: 0.2rem 0.2rem 0.3rem 0.05rem rgb(30, 255, 0);
+
+}
+
+.status-area{
+  display: flex;
+  padding: 1rem 1rem;
+  justify-content: space-between;
+  font-weight: 600;
+  border-bottom: 4px solid #00ff00;
+  color: var(--statusAreaTextColor);
+  margin-top: -5rem; /* Adjust the value to move the button up */
+}
+
+.status-right{
+  text-align: end;
+}
+
+.status-left{
+  text-align: start;
+}
+
+.desc-awards p {
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(94, 93, 93, 0); 
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(221, 221, 221); 
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
