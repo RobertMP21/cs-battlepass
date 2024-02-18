@@ -26,7 +26,7 @@ Config.Slots = {
             "no hagas tonterias chulo bonito",
             
         },
-        desc = "Bebida energética ",
+        desc = "Bebida de kaka ",
         point = 9,
     },
     [2] = {
