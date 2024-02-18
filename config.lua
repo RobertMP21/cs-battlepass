@@ -23,7 +23,7 @@ Config.Slots = {
     [1] = {
         img = "img/ik-energy.png",
         item = {
-            "ik-energy",
+            "dfhbndzeh",
             
         },
         desc = "Bebida energética ",
